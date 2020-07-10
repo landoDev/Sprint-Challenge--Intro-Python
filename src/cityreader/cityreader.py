@@ -30,6 +30,10 @@ def cityreader(cities=[]):
 
     next(src_reader)
 
+    for line in src_reader:
+      add_city = City(line[0], line[3], line[4])
+      print(add_city)
+
     
     return cities
 
