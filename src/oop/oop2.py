@@ -8,7 +8,9 @@ class GroundVehicle():
         self.num_wheels = num_wheels
 
     def drive(self):
-        print("vroooom")
+        # print("vroooom")
+        self.noise = "vroooom"
+        return "vroooom"
 
 
 # Subclass Motorcycle from GroundVehicle.
@@ -23,7 +25,10 @@ class Motorcycle(GroundVehicle):
         super().__init__(num_wheels)
         self.num_wheels = num_wheels
     def drive(self):
-        print("BRAAAP!!")
+        # super().drive()
+        # print("BRAAAP!!")
+        self.noise = "BRAAAP!!"
+        return "BRAAAP!!"
 
 vehicles = [
     GroundVehicle(),
@@ -35,4 +40,5 @@ vehicles = [
 
 # Go through the vehicles list and print the result of calling drive() on each.
 
-# TODO
+traffic = [print(sound.drive()) for sound in vehicles]
+
