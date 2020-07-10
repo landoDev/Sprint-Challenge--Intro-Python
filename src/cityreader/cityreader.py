@@ -34,7 +34,7 @@ def cityreader(cities=[]):
     next(src_reader)
 
     for line in src_reader:
-      cities.append(City(line[0], line[3], line[4]))
+      cities.append(City(line[0], float(line[3]), float(line[4])))
 
     
     return cities
